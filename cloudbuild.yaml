@@ -11,4 +11,6 @@ steps:
 # Push Docker image to GCR
 - name: 'gcr.io/cloud-builders/gsutil'
   args: ['cp', '-r', 'k8s/*', 'gs://$PROJECT_ID-kubernetes-manifests']
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['cp', 'cloudbuild.yaml', 'gs://$PROJECT_ID-ui-acceptance-tests']
 images: ['gcr.io/$PROJECT_ID/k8s-example-ui:$TAG_NAME']
