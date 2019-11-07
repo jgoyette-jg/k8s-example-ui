@@ -1,0 +1,7 @@
+steps:
+  # Install
+  - name: 'buildkite/puppeteer'
+    args: ['npm','install']
+  # Build
+  - name: 'buildkite/puppeteer'
+    args: ['npm','run','uiTests']
